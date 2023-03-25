@@ -1,9 +1,10 @@
 * {
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
 
 .logo img {
-    max-width: 33%;
+    max-width: 20%;
     margin: 0 5rem;
 }
 
@@ -13,16 +14,16 @@
 .bar {
     .bar-container {
         display: grid;
-        grid-template-columns: 300px 1fr 300px;
+        grid-template-columns: 400px 1fr 220px;
         align-items: center;
 
 
         .search {
-            width: 67%;
+            width: 70%;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
 
             input {
                 padding: .7rem 1rem;
@@ -30,7 +31,7 @@
                 border-bottom-left-radius: 50px;
                 width: 200%;
                 outline: none;
-                height: 40%;
+                // height: 40%;
                 background: transparent;
                 border: 1px solid #999;
 
@@ -46,7 +47,7 @@
                 border-top-right-radius: 50px;
                 cursor: pointer;
                 height: 40%;
-                border:  1px solid #515050;
+                border: 1px solid #515050;
                 border-left: none;
 
                 &:nth-child(3) {
@@ -55,7 +56,7 @@
                     border-radius: 0;
                     background: transparent;
                     font-size: 1.3em;
-                    display: flex;
+                    margin-left: 1.5rem;
                 }
             }
 
@@ -82,15 +83,51 @@
 }
 
 // aside start
+.sec-flex {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
 
-.menu-left{
-   
-.unorder-list {
-    
-    li {
-        list-style-type: none;
+    aside {
 
+
+        .menu-left {
+            border-right: 2px solid black;
+            width: 90%;
+            padding-top: 1rem;
+            height: 100vh;
+            margin: 0 1.7rem auto;
+
+            .unorder-list {
+                border-bottom: 1px solid #0000001a;
+                padding-bottom: 1rem;
+
+                li {
+                    list-style-type: none;
+                    display: grid;
+                    grid-gap: 1.3rem;
+                    grid-template-columns: max-content 1fr;
+                    align-items: center;
+                    padding: 0.3rem 1rem;
+
+                    i,
+                    .icon {
+                        font-size: 1.1em;
+
+                    }
+
+                    span {
+                        font-family: "Roboto", "Arial", sans-serif;
+                        font-size: .9em;
+                        line-height: 2rem;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+
+                }
+
+            }
+
+        }
     }
-}
-
 }
