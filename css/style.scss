@@ -3,9 +3,23 @@
     padding: 0;
 }
 
-.logo img {
-    max-width: 20%;
-    margin: 0 5rem;
+.logo {
+    cursor: pointer;
+
+    .fa-bars {
+        position: absolute;
+        margin: 0rem 3rem;
+        text-align: center;
+        top: 1rem;
+        font-size: 1.4em;
+
+
+    }
+
+    img {
+        max-width: 22%;
+        margin: 0 8rem;
+    }
 }
 
 
@@ -14,6 +28,7 @@
 .bar {
     .bar-container {
         display: grid;
+        // grid-template-columns: 101px 300px 1fr 200px;
         grid-template-columns: 400px 1fr 220px;
         align-items: center;
 
@@ -69,6 +84,7 @@
         width: 63%;
         margin-right: 1rem;
         align-items: center;
+        cursor: pointer;
 
         span {
 
@@ -85,10 +101,45 @@
 // aside start
 .sec-flex {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 250px 1fr;
     align-items: center;
+.mini-aside{ 
+    .menu-left{
+         display: none;
+    }
+}
+    aside, .mini-aside {
+        overflow-x: hidden;
+        overflow-y: auto;
+        &:hover {
+            &::-webkit-scrollbar-thumb {
+                width: 10px;
+                border-radius: 10px;
+                background: #909090;
+                &:hover {
+                    opacity: .78;
+                }
+            }
 
-    aside {
+        }
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 9px;
+        }
+
+        //   /* Track */
+        //   &::-webkit-scrollbar-track {
+        //     box-shadow: inset 0 0 5px grey; 
+        //     border-radius: 10px;
+        //   }
+
+        /* Handle */
+
+        /* Handle on hover */
+        // &::-webkit-scrollbar-thumb:hover {
+        //     background: #b30000;
+        // }
 
 
         .menu-left {
@@ -102,6 +153,13 @@
                 border-bottom: 1px solid #0000001a;
                 padding-bottom: 1rem;
 
+                h2 {
+                    font-size: 1.1em;
+                    padding-top: 1rem;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                }
+
                 li {
                     list-style-type: none;
                     display: grid;
@@ -109,9 +167,10 @@
                     grid-template-columns: max-content 1fr;
                     align-items: center;
                     padding: 0.3rem 1rem;
+                    cursor: pointer;
 
                     i,
-                    .icon {
+                    .fab-icon {
                         font-size: 1.1em;
 
                     }
@@ -122,6 +181,18 @@
                         line-height: 2rem;
                         font-weight: 500;
                         text-transform: capitalize;
+                    }
+
+                    p {
+                        font-size: .79em;
+                        font-family: "Roboto", "Arial", sans-serif;
+                        font-weight: 550;
+                        text-transform: capitalize;
+                        color: #60606087;
+                        line-height: .95rem;
+                        padding-top: 1rem;
+
+
                     }
 
                 }

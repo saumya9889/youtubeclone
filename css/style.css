@@ -3,9 +3,19 @@
   padding: 0;
 }
 
+.logo {
+  cursor: pointer;
+}
+.logo .fa-bars {
+  position: absolute;
+  margin: 0rem 3rem;
+  text-align: center;
+  top: 1rem;
+  font-size: 1.4em;
+}
 .logo img {
-  max-width: 20%;
-  margin: 0 5rem;
+  max-width: 22%;
+  margin: 0 8rem;
 }
 
 .bar .bar-container {
@@ -54,6 +64,7 @@
   width: 63%;
   margin-right: 1rem;
   align-items: center;
+  cursor: pointer;
 }
 .bar .profile span i,
 .bar .profile span svg,
@@ -63,36 +74,74 @@
 
 .sec-flex {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 250px 1fr;
   align-items: center;
 }
-.sec-flex aside .menu-left {
+.sec-flex .mini-aside .menu-left {
+  display: none;
+}
+.sec-flex aside, .sec-flex .mini-aside {
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* width */
+  /* Handle */
+  /* Handle on hover */
+}
+.sec-flex aside:hover::-webkit-scrollbar-thumb, .sec-flex .mini-aside:hover::-webkit-scrollbar-thumb {
+  width: 10px;
+  border-radius: 10px;
+  background: #909090;
+}
+.sec-flex aside:hover::-webkit-scrollbar-thumb:hover, .sec-flex .mini-aside:hover::-webkit-scrollbar-thumb:hover {
+  opacity: 0.78;
+}
+.sec-flex aside::-webkit-scrollbar, .sec-flex .mini-aside::-webkit-scrollbar {
+  width: 9px;
+}
+.sec-flex aside .menu-left, .sec-flex .mini-aside .menu-left {
   border-right: 2px solid black;
   width: 90%;
   padding-top: 1rem;
   height: 100vh;
   margin: 0 1.7rem auto;
 }
-.sec-flex aside .menu-left .unorder-list {
+.sec-flex aside .menu-left .unorder-list, .sec-flex .mini-aside .menu-left .unorder-list {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
   padding-bottom: 1rem;
 }
-.sec-flex aside .menu-left .unorder-list li {
+.sec-flex aside .menu-left .unorder-list h2, .sec-flex .mini-aside .menu-left .unorder-list h2 {
+  font-size: 1.1em;
+  padding-top: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.sec-flex aside .menu-left .unorder-list li, .sec-flex .mini-aside .menu-left .unorder-list li {
   list-style-type: none;
   display: grid;
   grid-gap: 1.3rem;
   grid-template-columns: max-content 1fr;
   align-items: center;
   padding: 0.3rem 1rem;
+  cursor: pointer;
 }
 .sec-flex aside .menu-left .unorder-list li i,
-.sec-flex aside .menu-left .unorder-list li .icon {
+.sec-flex aside .menu-left .unorder-list li .fab-icon, .sec-flex .mini-aside .menu-left .unorder-list li i,
+.sec-flex .mini-aside .menu-left .unorder-list li .fab-icon {
   font-size: 1.1em;
 }
-.sec-flex aside .menu-left .unorder-list li span {
+.sec-flex aside .menu-left .unorder-list li span, .sec-flex .mini-aside .menu-left .unorder-list li span {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 0.9em;
   line-height: 2rem;
   font-weight: 500;
   text-transform: capitalize;
+}
+.sec-flex aside .menu-left .unorder-list li p, .sec-flex .mini-aside .menu-left .unorder-list li p {
+  font-size: 0.79em;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 550;
+  text-transform: capitalize;
+  color: rgba(96, 96, 96, 0.5294117647);
+  line-height: 0.95rem;
+  padding-top: 1rem;
 }/*# sourceMappingURL=style.css.map */
